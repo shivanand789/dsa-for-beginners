@@ -112,17 +112,6 @@ Ex  2: Sorting numbers
 	Data structure: Array
 	Algorithm: Merge Sort / Quick Sort / Bubble Sort
 	
-	If you're teaching DSA Level 1 (Arrays only), the algorithms you introduce will mostly be:
-		1. Traversal
-		2. Linear Search
-		3. Find max/min
-		4. Count elements
-		5. Two pointers
-		6. Prefix sum
-		7. Sliding window (basic)
-	
-	If you want, I can also show you the 7 most important algorithms students must learn in DSA Level 1 (Arrays) so your 30-hour bootcamp structure becomes very clear.
-	
 Ex : Book shelf 
 	Data structure = how you arrange books
 	Algorithm = how you search for a book
