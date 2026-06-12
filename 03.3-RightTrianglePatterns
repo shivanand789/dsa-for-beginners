@@ -1,0 +1,447 @@
+# Level 3: Right Triangle Patterns
+
+In the previous levels, we learned:
+
+* Single loops
+* Nested loops
+* Square patterns
+* Basic triangle patterns
+
+In this level, we will build **Right Triangle Patterns** using numbers and alphabets.
+
+Remember:
+
+* Outer Loop → Controls Rows
+* Inner Loop → Controls Columns
+* The key to solving patterns is identifying:
+
+  * What is changing?
+  * What is repeating?
+
+---
+
+# Pattern 12: Increasing Number Triangle
+
+## Output
+
+```text
+1
+12
+123
+1234
+12345
+```
+
+## Observation
+
+| Row | Output |
+| --- | ------ |
+| 1   | 1      |
+| 2   | 12     |
+| 3   | 123    |
+| 4   | 1234   |
+| 5   | 12345  |
+
+Notice:
+
+* The row number determines how many numbers are printed.
+* The numbers always start from 1.
+* The column value is printed.
+
+---
+
+## Logic
+
+* Row 1 → Print 1 number
+* Row 2 → Print 2 numbers
+* Row 3 → Print 3 numbers
+* Row 4 → Print 4 numbers
+* Row 5 → Print 5 numbers
+
+The inner loop prints values from `1` to `row`.
+
+---
+
+## For Loop
+
+```python
+for row in range(1, 6):
+    for col in range(1, row + 1):
+        print(col, end="")
+    print()
+```
+
+---
+
+## While Loop
+
+```python
+row = 1
+
+while row < 6:
+
+    col = 1
+
+    while col <= row:
+        print(col, end="")
+        col += 1
+
+    print()
+    row += 1
+```
+
+---
+
+# Pattern 13: Repeated Row Number Triangle
+
+## Output
+
+```text
+1
+22
+333
+4444
+55555
+```
+
+## Observation
+
+| Row | Output |
+| --- | ------ |
+| 1   | 1      |
+| 2   | 22     |
+| 3   | 333    |
+| 4   | 4444   |
+| 5   | 55555  |
+
+Notice:
+
+* The row number is repeated.
+* Number of repetitions depends on the row number.
+
+---
+
+## Logic
+
+* Row 1 → Print 1 once
+* Row 2 → Print 2 twice
+* Row 3 → Print 3 three times
+* Row 4 → Print 4 four times
+* Row 5 → Print 5 five times
+
+The inner loop prints the row value repeatedly.
+
+---
+
+## For Loop
+
+```python
+for row in range(1, 6):
+    for col in range(1, row + 1):
+        print(row, end="")
+    print()
+```
+
+---
+
+## While Loop
+
+```python
+row = 1
+
+while row < 6:
+
+    col = 1
+
+    while col <= row:
+        print(row, end="")
+        col += 1
+
+    print()
+    row += 1
+```
+
+---
+
+# Pattern 14: Increasing Alphabet Triangle
+
+## Output
+
+```text
+A
+AB
+ABC
+ABCD
+ABCDE
+```
+
+## Observation
+
+| Row | Output |
+| --- | ------ |
+| 1   | A      |
+| 2   | AB     |
+| 3   | ABC    |
+| 4   | ABCD   |
+| 5   | ABCDE  |
+
+The pattern behaves exactly like Pattern 12.
+
+The only difference is that we print letters instead of numbers.
+
+---
+
+## Understanding ASCII Values
+
+Computers store characters using numeric values.
+
+| Character | ASCII Value |
+| --------- | ----------- |
+| A         | 65          |
+| B         | 66          |
+| C         | 67          |
+| D         | 68          |
+| E         | 69          |
+
+Example:
+
+```python
+print(chr(65))  # A
+print(chr(66))  # B
+print(chr(67))  # C
+```
+
+The `chr()` function converts a number into a character.
+
+---
+
+## How It Works
+
+### Row 1
+
+```python
+range(1)
+```
+
+Produces:
+
+```text
+0
+```
+
+```python
+chr(65 + 0)
+```
+
+Output:
+
+```text
+A
+```
+
+---
+
+### Row 2
+
+```python
+range(2)
+```
+
+Produces:
+
+```text
+0 1
+```
+
+```python
+chr(65 + 0) -> A
+chr(65 + 1) -> B
+```
+
+Output:
+
+```text
+AB
+```
+
+---
+
+## For Loop
+
+```python
+for row in range(1, 6):
+    for col in range(row):
+        print(chr(65 + col), end="")
+    print()
+```
+
+---
+
+## While Loop
+
+```python
+row = 1
+
+while row <= 5:
+
+    col = 0
+
+    while col < row:
+        print(chr(65 + col), end="")
+        col += 1
+
+    print()
+    row += 1
+```
+
+---
+
+## Easier Version (Without ASCII)
+
+Instead of using ASCII values, we can store letters in a string.
+
+```python
+letters = "ABCDE"
+
+for row in range(1, 6):
+    for col in range(row):
+        print(letters[col], end="")
+    print()
+```
+
+---
+
+# Pattern 15: Repeated Alphabet Triangle
+
+## Output
+
+```text
+A
+BB
+CCC
+DDDD
+EEEEE
+```
+
+## Observation
+
+| Row | Output |
+| --- | ------ |
+| 1   | A      |
+| 2   | BB     |
+| 3   | CCC    |
+| 4   | DDDD   |
+| 5   | EEEEE  |
+
+Notice:
+
+* The alphabet changes with the row.
+* The letter is repeated according to the row number.
+
+---
+
+## Logic
+
+* Row 1 → Print A once
+* Row 2 → Print B twice
+* Row 3 → Print C three times
+* Row 4 → Print D four times
+* Row 5 → Print E five times
+
+The row controls both:
+
+* Which letter to print
+* How many times to print it
+
+---
+
+## For Loop
+
+```python
+for row in range(1, 6):
+    for col in range(row):
+        print(chr(64 + row), end="")
+    print()
+```
+
+---
+
+## While Loop
+
+```python
+row = 1
+
+while row <= 5:
+
+    col = 0
+
+    while col < row:
+        print(chr(64 + row), end="")
+        col += 1
+
+    print()
+    row += 1
+```
+
+---
+
+## Easier Version (Without ASCII)
+
+```python
+letters = "ABCDE"
+
+for row in range(1, 6):
+    for col in range(row):
+        print(letters[row - 1], end="")
+    print()
+```
+
+---
+
+# Pattern Analysis Summary
+
+| Pattern                      | Printed Value   | Depends On |
+| ---------------------------- | --------------- | ---------- |
+| Increasing Number Triangle   | Column Number   | Column     |
+| Repeated Number Triangle     | Row Number      | Row        |
+| Increasing Alphabet Triangle | Column Position | Column     |
+| Repeated Alphabet Triangle   | Row Position    | Row        |
+
+---
+
+# Key Takeaways
+
+Before solving any triangle pattern, ask:
+
+### Step 1
+
+How many rows are there?
+
+### Step 2
+
+How many columns are printed in each row?
+
+### Step 3
+
+What should be printed?
+
+* Row value?
+* Column value?
+* Character?
+* Symbol?
+
+### Step 4
+
+Write the outer loop.
+
+### Step 5
+
+Write the inner loop.
+
+Remember:
+
+```text
+Pattern = Rows + Columns + Logic
+```
+
+Most triangle patterns are simply a variation of this formula.
