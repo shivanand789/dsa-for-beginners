@@ -1,128 +1,251 @@
-## What is DSA
-A Data Structure is a way to store and organize data in memory so that we can use it efficiently.
+# What is DSA?
 
-So first of all, I just want to say that data structures are not the same thing as data types okay. So our data types are kind of like normal pieces of data like an integer a Boolean a string. These are all the data types.
+A **Data Structure** is a way to store and organize data in memory so that we can use it efficiently.
 
-And these data types will be different across different programming languages. Data structures are typically storing those type
+## Data Types vs Data Structures
 
-Data structures are not specific to one programming language. 
-They can be implemented in many different ways and can exist any language.
+Data structures are **not the same as data types**.
 
-Quick overview of the different data structures that we have at high level explanation.
-So we have data structures. Now our data structures are split into two categories. We have linear structures and then non linear structures.
+Examples of data types:
 
+* Integer
+* Boolean
+* String
 
-Now for our linear data structures we have an array. We have a linked list. And we have a stack as well as a queue.
-So these are kind of the four main linear data structures that we're going to have a look at. 
-Now for our non-linear data structures,  We have trees. We have graphs, and we have something known as tries.
+Data types may differ across programming languages, but data structures are language-independent concepts used to organize and store data.
 
-Okay. So again linear this means we kind of store in a straight line and non-linear as it kind of defines in the form of tree or graph.
-In some instances it's going to be a lot better for us to use a non-linear data structure.
-In other instances, we want to use a linear structure. Again, really depends on what we're trying to do.
+Data structures can be implemented in different ways and can exist in any programming language.
 
-**Ex**
-	If you have numbers: 5, 2, 9, 1
-	You can store them as:
-		○ Array → [5, 2, 9, 1]
-		○ Stack → last in first out
-		○ Queue → first in first out
-		○ Tree → hierarchical structure
-		○ Graph → network structure
-## Different structures are used depending on the problem.
+---
 
-Real Life	Data Structure
-Books on shelf	Array
-Stack of plates	Stack
-People in line	Queue
-Family tree	Tree
-Google Maps roads	Graph
+## Categories of Data Structures
+
+Data structures are broadly divided into two categories:
+
+### Linear Data Structures
+
+Data is stored in a sequential manner.
+
+Examples:
+
+* Array
+* Linked List
+* Stack
+* Queue
+
+### Non-Linear Data Structures
+
+Data is organized hierarchically or as interconnected nodes.
+
+Examples:
+
+* Tree
+* Graph
+* Trie
+
+### Linear vs Non-Linear
+
+| Linear                       | Non-Linear                               |
+| ---------------------------- | ---------------------------------------- |
+| Data stored in a sequence    | Data stored in hierarchical/network form |
+| Easier traversal             | More complex relationships               |
+| Example: Array, Stack, Queue | Example: Tree, Graph                     |
+
+The choice of data structure depends on the problem being solved.
+
+---
+
+## Example
+
+If you have the numbers:
+
+```text
+5, 2, 9, 1
+```
+
+You can store them as:
+
+* **Array** → `[5, 2, 9, 1]`
+* **Stack** → Last In First Out (LIFO)
+* **Queue** → First In First Out (FIFO)
+* **Tree** → Hierarchical structure
+* **Graph** → Network structure
+
+---
+
+## Real-Life Examples of Data Structures
+
+| Real Life Example | Data Structure |
+| ----------------- | -------------- |
+| Books on a shelf  | Array          |
+| Stack of plates   | Stack          |
+| People in a line  | Queue          |
+| Family tree       | Tree           |
+| Google Maps roads | Graph          |
+
+---
 
 # What is an Algorithm?
-An Algorithm is a step-by-step procedure to solve a problem.
-It tells:
-	• What steps to take
-	• In what order
-	• To get the correct result
 
-We can think of it like a recipe.
-Example: Making tea
-	1. Boil water
-	2. Add tea powder
-	3. Add milk
-	4. Add sugar
-	5. Pour into cup
+An **Algorithm** is a step-by-step procedure used to solve a problem.
+
+It tells us:
+
+* What steps to take
+* In what order to take them
+* How to reach the correct result
+
+---
+
+## Real-Life Example: Making Tea
+
+### Algorithm
+
+1. Boil water
+2. Add tea powder
+3. Add milk
+4. Add sugar
+5. Pour into a cup
+
 This is an algorithm for making tea.
 
-In Programming
-An algorithm describes the logic to solve a problem before writing code.
-Example problem:
-Find the largest number in an array
-Array: [3, 9, 2, 7, 5]
-Algorithm:
-	1. Assume the first number is the largest.
-	2. Compare it with the next number.
-	3. If the next number is larger, update the largest.
-	4. Continue until the array ends.
-	5. Return the largest number.
+---
+
+## Algorithms in Programming
+
+An algorithm describes the logic required to solve a problem before writing code.
+
+### Problem
+
+Find the largest number in an array.
+
+```text
+[3, 9, 2, 7, 5]
+```
+
+### Algorithm
+
+1. Assume the first number is the largest.
+2. Compare it with the next number.
+3. If the next number is larger, update the largest value.
+4. Continue until the array ends.
+5. Return the largest number.
+
+---
 
 ## Key Properties of an Algorithm
+
 A good algorithm must have:
-	1. Input
+
+### 1. Input
+
 Data given to the algorithm.
-	2. Output
-Result produced.
-	3. Definite steps
+
+### 2. Output
+
+Result produced by the algorithm.
+
+### 3. Definite Steps
+
 Each step must be clear and unambiguous.
-	4. Finite
-Must finish after a limited number of steps.
-	5. Correctness
-Must give the right answer.
 
-**Simple Example : Problem: Add two numbers**
+### 4. Finite
 
-Algorithm:
-	1. Start
-	2. Read number A
-	3. Read number B
-	4. Sum = A + B
-	5. Print Sum
-	6. Stop
+The algorithm must finish after a limited number of steps.
 
-## DSA
-	• Data Structures → How data is stored (Array, Stack, Queue, Tree)
-	• Algorithms → How we process that data
+### 5. Correctness
 
-Problem	    DatSStructure	Algorithm
-Search number	Array	    Binary Search
-Sort numbers	Array	    Merge Sort
-Shortest path	Graph	    Dijkstra
+The algorithm must produce the correct result.
 
-Ex 1 : Searching a number
-	Data structure: Array
-	Algorithm: Binary Search
-		Steps:
-			i. Find middle
-			ii. Compare
-			iii. Eliminate half
-			iv. Repeat
+---
 
-Ex  2: Sorting numbers
-	Data structure: Array
-	Algorithm: Merge Sort / Quick Sort / Bubble Sort
-	
-Ex : Book shelf 
-	Data structure = how you arrange books
-	Algorithm = how you search for a book
+## Simple Example: Add Two Numbers
 
-## How to approach a solution ?
-	Understand the Problem 
-	First → Think algorithm
-	Then → Convert it to code
+### Algorithm
 
-## Algorithm thinking means:
-Breaking a problem into clear logical steps before writing code.
-Good programmers do thinking first → coding later.
-General problem-solving flow:
+1. Start
+2. Read number A
+3. Read number B
+4. Sum = A + B
+5. Print Sum
+6. Stop
+
+---
+
+# DSA = Data Structures + Algorithms
+
+* **Data Structures** → How data is stored
+* **Algorithms** → How data is processed
+
+| Problem       | Data Structure | Algorithm            |
+| ------------- | -------------- | -------------------- |
+| Search number | Array          | Binary Search        |
+| Sort numbers  | Array          | Merge Sort           |
+| Shortest path | Graph          | Dijkstra's Algorithm |
+
+---
+
+## Example 1: Searching a Number
+
+**Data Structure:** Array
+
+**Algorithm:** Binary Search
+
+### Steps
+
+1. Find the middle element.
+2. Compare with the target.
+3. Eliminate half of the search space.
+4. Repeat until found.
+
+---
+
+## Example 2: Sorting Numbers
+
+**Data Structure:** Array
+
+**Algorithms:**
+
+* Merge Sort
+* Quick Sort
+* Bubble Sort
+
+---
+
+## Book Shelf Analogy
+
+* **Data Structure** = How you arrange books
+* **Algorithm** = How you search for a book
+
+---
+
+# How to Approach a Solution
+
+### Step 1
+
+Understand the problem.
+
+### Step 2
+
+Think about the algorithm.
+
+### Step 3
+
+Convert the algorithm into code.
+
+---
+
+## Algorithm Thinking
+
+Algorithm thinking means:
+
+> Breaking a problem into clear logical steps before writing code.
+
+Good programmers think first and code later.
+
+### Problem-Solving Flow
+
+```text
 Problem
    ↓
 Understand Input / Output
@@ -132,69 +255,80 @@ Think Steps (Algorithm)
 Write Code
    ↓
 Optimize
+```
 
-Example problem:
-Find the largest number in an array
-Array:
+---
+
+## Example
+
+### Problem
+
+Find the largest number in an array.
+
+```text
 [3, 7, 2, 9, 5]
-Algorithm thinking:
-	1. Assume first element is largest
-	2. Compare with next element
-	3. If next element is bigger, update
-	4. Continue till end
-	5. Return largest
-Code becomes easy because the algorithm is clear.
-Important habit for students:
-Before coding, ask:
-	1. What is the input?
-	2. What is the output?
-	3. What steps solve it?
+```
 
-## What is an Algorithm
-An algorithm is a finite sequence of well-defined steps to solve a problem.
-Key characteristics:
-	1. Input
-Data given to the algorithm.
-Example
-Array [2,5,7]
-	2. Output
-Result produced.
-Example
-Largest number 7
-	3. Definite steps
-Every step must be clear.
-	4. Finite
-Must finish in limited steps.
-	5. Correct
-Must produce correct results.
-Example algorithm: Find sum of array
-Steps:
-1. Start
-2. sum = 0
-3. Traverse array
-4. Add each element to sum
-5. Print sum
-6. Stop
-Important point for beginners:
-Algorithm ≠ Code
-Algorithm = idea
-Code = implementation
+### Algorithm Thinking
 
-## Brute Force vs Optimized
-This is one of the most important ideas in DSA.
-When solving a problem there are usually:
-1) Brute force solution
-2) Optimized solution
+1. Assume the first element is the largest.
+2. Compare it with the next element.
+3. If the next element is larger, update the largest value.
+4. Continue until the end.
+5. Return the largest number.
 
-### Brute Force
-Brute force means:
-The most straightforward solution without worrying about efficiency.
-Example problem:
-Find if there exists a pair with sum = 10
-Array:
-[2,4,6,3,7]
-Brute force approach:
-Check every pair.
+Once the algorithm is clear, writing code becomes easy.
+
+---
+
+## Important Questions Before Coding
+
+Ask yourself:
+
+1. What is the input?
+2. What is the output?
+3. What steps solve the problem?
+
+---
+
+# Algorithm vs Code
+
+| Algorithm            | Code              |
+| -------------------- | ----------------- |
+| Idea                 | Implementation    |
+| Language-independent | Language-specific |
+| Focuses on logic     | Focuses on syntax |
+
+---
+
+# Brute Force vs Optimized Approach
+
+This is one of the most important concepts in DSA.
+
+Most problems have:
+
+1. A brute-force solution
+2. An optimized solution
+
+---
+
+## Brute Force
+
+Brute force means using the most straightforward approach without worrying about efficiency.
+
+### Example Problem
+
+Find whether a pair exists whose sum equals 10.
+
+```text
+[2, 4, 6, 3, 7]
+```
+
+### Brute Force Approach
+
+Check every possible pair:
+
+```text
 2 + 4
 2 + 6
 2 + 3
@@ -203,38 +337,77 @@ Check every pair.
 4 + 3
 4 + 7
 ...
-Algorithm:
+```
+
+### Pseudocode
+
+```text
 for i from 0 to n-1
     for j from i+1 to n-1
         if arr[i] + arr[j] == target
             return true
-Time complexity:
+```
+
+### Time Complexity
+
+```text
 O(n²)
+```
 
-### Optimized Approach
-Instead of checking all pairs, we use a better idea.
-Example (sorted array):
-[2,3,4,6,7]
-Two pointer approach:
+---
+
+## Optimized Approach
+
+Instead of checking every pair, use a better strategy.
+
+### Sorted Array
+
+```text
+[2, 3, 4, 6, 7]
+```
+
+### Two Pointer Technique
+
+```text
 left = 0
-right = n-1
+right = n - 1
+```
+
 Steps:
-2 + 7 = 9 (increase left)
-3 + 7 = 10 → found
 
-**Time complexity: O(n)**
+```text
+2 + 7 = 9   → increase left
+3 + 7 = 10  → found
+```
 
-Comparison:
-Approach	Complexity
-Brute force	O(n²)
-Optimized	O(n)
+### Time Complexity
 
-## When solving a problem:
-Step 1 :  Write brute force
-Step 2 :  Find time complexity
-Step 3 :  Try optimizing the solution
-	By asking:
-	Can we reduce loops?
-    Can we reuse work?
-    Can we use extra memory?
-    That leads to optimization.
+```text
+O(n)
+```
+
+---
+
+## Comparison
+
+| Approach    | Complexity |
+| ----------- | ---------- |
+| Brute Force | O(n²)      |
+| Optimized   | O(n)       |
+
+---
+
+# When Solving a Problem
+
+1. Write the brute-force solution.
+2. Find the time complexity.
+3. Try to optimize the solution.
+
+### Ask Yourself
+
+* Can we reduce loops?
+* Can we reuse previous work?
+* Can we use extra memory?
+* Can we precompute values?
+
+These questions often lead to optimization.
