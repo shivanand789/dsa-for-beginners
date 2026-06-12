@@ -1,4 +1,4 @@
-#Waht is DSA
+## What is DSA
 A Data Structure is a way to store and organize data in memory so that we can use it efficiently.
 
 So first of all, I just want to say that data structures are not the same thing as data types okay. So our data types are kind of like normal pieces of data like an integer a Boolean a string. These are all the data types.
@@ -28,7 +28,7 @@ In other instances, we want to use a linear structure. Again, really depends on 
 		○ Queue → first in first out
 		○ Tree → hierarchical structure
 		○ Graph → network structure
-##Different structures are used depending on the problem.
+## Different structures are used depending on the problem.
 
 Real Life	Data Structure
 Books on shelf	Array
@@ -37,7 +37,7 @@ People in line	Queue
 Family tree	Tree
 Google Maps roads	Graph
 
-#What is an Algorithm?
+# What is an Algorithm?
 An Algorithm is a step-by-step procedure to solve a problem.
 It tells:
 	• What steps to take
@@ -65,7 +65,7 @@ Algorithm:
 	4. Continue until the array ends.
 	5. Return the largest number.
 
-##Key Properties of an Algorithm
+## Key Properties of an Algorithm
 A good algorithm must have:
 	1. Input
 Data given to the algorithm.
@@ -78,7 +78,7 @@ Must finish after a limited number of steps.
 	5. Correctness
 Must give the right answer.
 
-** Simple Example : Problem: Add two numbers**
+**Simple Example : Problem: Add two numbers**
 
 Algorithm:
 	1. Start
@@ -88,7 +88,7 @@ Algorithm:
 	5. Print Sum
 	6. Stop
 
-##DSA
+## DSA
 	• Data Structures → How data is stored (Array, Stack, Queue, Tree)
 	• Algorithms → How we process that data
 
@@ -114,12 +114,12 @@ Ex : Book shelf
 	Data structure = how you arrange books
 	Algorithm = how you search for a book
 
-##How to approach a solution ?
+## How to approach a solution ?
 	Understand the Problem 
 	First → Think algorithm
 	Then → Convert it to code
 
-##Algorithm thinking means:
+## Algorithm thinking means:
 Breaking a problem into clear logical steps before writing code.
 Good programmers do thinking first → coding later.
 General problem-solving flow:
@@ -150,7 +150,7 @@ Before coding, ask:
 	2. What is the output?
 	3. What steps solve it?
 
-##What is an Algorithm
+## What is an Algorithm
 An algorithm is a finite sequence of well-defined steps to solve a problem.
 Key characteristics:
 	1. Input
@@ -180,13 +180,13 @@ Algorithm ≠ Code
 Algorithm = idea
 Code = implementation
 
-##Brute Force vs Optimized
+## Brute Force vs Optimized
 This is one of the most important ideas in DSA.
 When solving a problem there are usually:
 1) Brute force solution
 2) Optimized solution
 
-###Brute Force
+### Brute Force
 Brute force means:
 The most straightforward solution without worrying about efficiency.
 Example problem:
@@ -211,7 +211,7 @@ for i from 0 to n-1
 Time complexity:
 O(n²)
 
-Optimized Approach
+### Optimized Approach
 Instead of checking all pairs, we use a better idea.
 Example (sorted array):
 [2,3,4,6,7]
@@ -229,7 +229,7 @@ Approach	Complexity
 Brute force	O(n²)
 Optimized	O(n)
 
-##When solving a problem:
+## When solving a problem:
 Step 1 :  Write brute force
 Step 2 :  Find time complexity
 Step 3 :  Try optimizing the solution
